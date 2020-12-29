@@ -7,8 +7,8 @@ namespace JSViewerVueCore.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly IHostingEnvironment _env;
-        public HomeController(IHostingEnvironment env) => _env = env;
+        private readonly IWebHostEnvironment _env;
+        public HomeController(IWebHostEnvironment env) => _env = env;
 
         public IActionResult Index()
         {
