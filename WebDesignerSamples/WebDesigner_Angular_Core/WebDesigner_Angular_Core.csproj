@@ -12,11 +12,11 @@
     <RootNamespace>WebDesigner_Angular_Core_</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="3.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="5.0.3" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="GrapeCity.ActiveReports.Aspnetcore.Viewer" Version="15.0.5" />
-    <PackageReference Include="GrapeCity.ActiveReports.Aspnetcore.Designer" Version="15.0.5" />
+    <PackageReference Include="GrapeCity.ActiveReports.Aspnetcore.Viewer" Version="15.1.0" />
+    <PackageReference Include="GrapeCity.ActiveReports.Aspnetcore.Designer" Version="15.1.0" />
   </ItemGroup>
   <ItemGroup>
     <!-- Don't publish the SPA source files, but do show them in the project files list -->

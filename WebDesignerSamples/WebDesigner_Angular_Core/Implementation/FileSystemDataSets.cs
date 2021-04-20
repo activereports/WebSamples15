@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Linq;
-using Newtonsoft.Json;
+using System.Text.Json;
 
 using WebDesignerAngularCore.Services;
 
@@ -40,7 +40,7 @@ namespace WebDesignerAngularCore.Implementation
 
 			using (var streamReader = File.OpenText(fullPath))
 			{
-				return JsonConvert.DeserializeObject(streamReader.ReadToEnd());
+				return JsonSerializer.Deserialize(streamReader.ReadToEnd(), typeof(object));
 			}
 		}
 	}

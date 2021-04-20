@@ -9,8 +9,8 @@
     <Folder Include="wwwroot\" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="GrapeCity.ActiveReports.Aspnetcore.Viewer" Version="15.0.5" />
-    <PackageReference Include="System.Text.Encoding.CodePages" Version="4.7.1" />
+    <PackageReference Include="GrapeCity.ActiveReports.Aspnetcore.Viewer" Version="15.1.0" />
+    <PackageReference Include="System.Text.Encoding.CodePages" Version="5.0.0" />
   </ItemGroup>
   <Target Name="ClientBuild" BeforeTargets="BeforeBuild">
     <Exec WorkingDirectory="wwwroot" Command="npm install" />
