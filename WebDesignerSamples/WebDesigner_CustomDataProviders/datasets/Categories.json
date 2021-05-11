@@ -1,0 +1,36 @@
+{
+	"DataSet": {
+		"Name": "Categories",
+		"Query": {
+			"CommandText": "$.Data[*]",
+			"DataSourceName": "NorthwindCategories"
+		},
+		"Fields": [
+			{
+				"Name": "CategoryID",
+				"DataField": "CategoryID",
+				"DataType": "Integer",
+				"Aggregate": "Count"
+			},
+			{
+				"Name": "CategoryName",
+				"DataField": "CategoryName",
+				"DataType": "String",
+				"Aggregate": "Count"
+			},
+			{
+				"Name": "Description",
+				"DataField": "Description",
+				"DataType": "String",
+				"Aggregate": "Count"
+			}
+		]
+	},
+	"ODataUrl": "https://services.odata.org/V4/Northwind/Northwind.svc/Categories?$select=CategoryID,CategoryName,Description&$format=application/json;odata.metadata=none",
+	"DataSource": {
+		"Name": "NorthwindCategories",
+		"ConnectionProperties": {
+			"DataProvider": "JSON"
+		}
+	}
+}
