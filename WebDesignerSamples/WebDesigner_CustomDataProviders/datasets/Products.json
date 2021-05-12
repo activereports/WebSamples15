@@ -1,0 +1,60 @@
+{
+	"DataSet": {
+		"Name": "Products",
+		"Query": {
+			"CommandText": "$.Data[*]",
+			"DataSourceName": "NorthwindProducts"
+		},
+		"Fields": [
+			{
+				"DataField": "ProductID",
+				"Name": "ProductID",
+				"DataType": "Integer",
+				"Aggregate": "Count"
+			},
+			{
+				"DataField": "ProductName",
+				"Name": "ProductName",
+				"DataType": "String",
+				"Aggregate": "Count"
+			},
+			{
+				"DataField": "QuantityPerUnit",
+				"Name": "QuantityPerUnit",
+				"DataType": "String",
+				"Aggregate": "Count"
+			},
+			{
+				"DataField": "UnitPrice",
+				"Name": "UnitPrice",
+				"DataType": "Float",
+				"Aggregate": "Sum"
+			},
+			{
+				"DataField": "UnitsInStock",
+				"Name": "UnitsInStock",
+				"DataType": "Integer",
+				"Aggregate": "Sum"
+			},
+			{
+				"DataField": "ReorderLevel",
+				"Name": "ReorderLevel",
+				"DataType": "Integer",
+				"Aggregate": "Sum"
+			},
+			{
+				"DataField": "Discontinued",
+				"Name": "Discontinued",
+				"DataType": "Boolean",
+				"Aggregate": "Count"
+			}
+		]
+	},
+	"ODataUrl": "https://services.odata.org/V4/Northwind/Northwind.svc/Products?$select=ProductID,ProductName,QuantityPerUnit,UnitPrice,UnitsInStock,ReorderLevel,Discontinued&$format=application/json;odata.metadata=none",
+	"DataSource": {
+		"Name": "NorthwindProducts",
+		"ConnectionProperties": {
+			"DataProvider": "JSON"
+		}
+	}
+}

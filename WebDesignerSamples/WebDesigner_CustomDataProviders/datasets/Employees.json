@@ -1,0 +1,42 @@
+{
+	"DataSet": {
+		"Name": "Employees",
+		"Query": {
+			"CommandText": "$.Data[*]",
+			"DataSourceName": "NorthwindEmployees"
+		},
+		"Fields": [
+			{
+				"Name": "EmployeeID",
+				"DataField": "EmployeeID",
+				"DataType": "Integer",
+				"Aggregate": "Count"
+			},
+			{
+				"Name": "FirstName",
+				"DataField": "FirstName",
+				"DataType": "String",
+				"Aggregate": "Count"
+			},
+			{
+				"Name": "LastName",
+				"DataField": "LastName",
+				"DataType": "String",
+				"Aggregate": "Count"
+			},
+			{
+				"Name": "Title",
+				"DataField": "Title",
+				"DataType": "String",
+				"Aggregate": "Count"
+			}
+		]
+	},
+	"ODataUrl": "https://services.odata.org/V4/Northwind/Northwind.svc/Employees?$select=EmployeeID,FirstName,LastName,Title&$format=application/json;odata.metadata=none",
+	"DataSource": {
+		"Name": "NorthwindEmployees",
+		"ConnectionProperties": {
+			"DataProvider": "JSON"
+		}
+	}
+}
