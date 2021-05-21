@@ -4,8 +4,8 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="C1.AdoNet.OData" Version="1.0.20211.49" />
-    <PackageReference Include="GrapeCity.ActiveReports.Aspnetcore.Viewer" Version="15.2.0-alpha-829" />
-    <PackageReference Include="GrapeCity.ActiveReports.Aspnetcore.Designer" Version="15.2.0-alpha-649" />
+    <PackageReference Include="GrapeCity.ActiveReports.Aspnetcore.Viewer" Version="15.1.3" />
+    <PackageReference Include="GrapeCity.ActiveReports.Aspnetcore.Designer" Version="15.1.3" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageReference Include="System.Data.SQLite" Version="1.0.113" />
     <PackageReference Include="System.Data.SQLite.EF6" Version="1.0.113" />
@@ -15,6 +15,7 @@
     <Content Remove="appsettings.Development.json" />
     <Content Remove="appsettings.json" />
     <Content Remove="GrapeCity.ActiveReports.config" />
+    <Content Include="templates\**" CopyToPublishDirectory="PreserveNewest" />
     <Content Include="resources\**" CopyToPublishDirectory="PreserveNewest" />
     <Content Include="wwwwroot\**" CopyToPublishDirectory="PreserveNewest" />
   </ItemGroup>
