@@ -19,6 +19,9 @@ namespace WebDesignerCustomDataProviders
 	{
 		private static readonly DirectoryInfo ResourcesRootDirectory = 
 			new DirectoryInfo(Path.Combine(Directory.GetCurrentDirectory(), "resources" + Path.DirectorySeparatorChar));
+		
+		private static readonly DirectoryInfo TemplatesRootDirectory = 
+			new DirectoryInfo(Path.Combine(Directory.GetCurrentDirectory(), "templates" + Path.DirectorySeparatorChar));
 
 		private static readonly DirectoryInfo DataSetsRootDirectory = 
 			new DirectoryInfo(Path.Combine(Directory.GetCurrentDirectory(), "datasets") + Path.DirectorySeparatorChar);
@@ -36,6 +39,7 @@ namespace WebDesignerCustomDataProviders
 			services
 				.AddReporting()
 				.AddDesigner()
+				.AddSingleton<ITemplatesService>(new FileSystemTemplates(TemplatesRootDirectory))
 				.AddSingleton<IDataSetsService>(new ODataDataSets(DataSetsRootDirectory))
 				.AddMvc(options => options.EnableEndpointRouting = false)
 				.AddJsonOptions(options => options.JsonSerializerOptions.PropertyNamingPolicy = null);
