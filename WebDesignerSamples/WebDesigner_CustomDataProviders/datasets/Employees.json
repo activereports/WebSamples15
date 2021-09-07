@@ -2,13 +2,13 @@
 	"DataSet": {
 		"Name": "Employees",
 		"Query": {
-			"CommandText": "$.Data[*]",
+			"CommandText": "SELECT Id, FirstName, LastName, Title from Employee",
 			"DataSourceName": "NorthwindEmployees"
 		},
 		"Fields": [
 			{
-				"Name": "EmployeeID",
-				"DataField": "EmployeeID",
+				"Name": "Id",
+				"DataField": "Id",
 				"DataType": "Integer",
 				"Aggregate": "Count"
 			},
@@ -32,11 +32,11 @@
 			}
 		]
 	},
-	"ODataUrl": "https://services.odata.org/V4/Northwind/Northwind.svc/Employees?$select=EmployeeID,FirstName,LastName,Title&$format=application/json;odata.metadata=none",
 	"DataSource": {
 		"Name": "NorthwindEmployees",
 		"ConnectionProperties": {
-			"DataProvider": "JSON"
+			"ConnectString": "Data Source=Northwind.sqlite",
+			"DataProvider": "SQLITE"
 		}
 	}
 }

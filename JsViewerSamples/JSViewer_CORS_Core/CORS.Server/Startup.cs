@@ -42,8 +42,8 @@ namespace JSViewer_CORS_Core
 			}
 
 			// Configure CORS
-			app.UseCors(cors => cors.SetIsOriginAllowed(origin => new Uri(origin).Host == "localhost").AllowAnyMethod().AllowAnyHeader().AllowCredentials());
-
+			app.UseCors(cors => cors.SetIsOriginAllowed(origin => new Uri(origin).Host == "localhost")
+				.AllowAnyMethod().AllowAnyHeader().AllowCredentials().WithExposedHeaders("Content-Disposition"));
 			app.UseReporting(settings =>
 			{
 				settings.UseEmbeddedTemplates(EmbeddedReportsPrefix, Assembly.GetAssembly(GetType()));

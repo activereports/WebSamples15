@@ -6,7 +6,7 @@ ASP.NET MVC 5 backend.
 ## System requirements
 
 This sample requires:
-[Visual Studio 2013](https://visualstudio.microsoft.com/vs/) or newer, and
+[Visual Studio 2015](https://visualstudio.microsoft.com/vs/) or newer, and
 the [.NET Framework Dev Pack](https://www.microsoft.com/net/download) 4.6.2 or later.
 
 ## Build the sample
