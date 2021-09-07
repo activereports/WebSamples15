@@ -9,6 +9,6 @@
     <EmbeddedResource Include="..\..\JsViewerReports\*.*" LinkBase="Reports" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="GrapeCity.ActiveReports.Aspnetcore.Viewer" Version="15.1.3" />
+    <PackageReference Include="GrapeCity.ActiveReports.Aspnetcore.Viewer" Version="15.2.0" />
   </ItemGroup>
 </Project>

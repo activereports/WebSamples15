@@ -20,15 +20,8 @@ namespace WebDesignerCustomStore.Implementation.CustomStore
 					  .ToArray();
 		}
 
-		public Report GetReport(string id)
-		{
-			var report = _db.GetReport(id);
+		public Report GetReport(string id) => _db.GetReport(id);
 
-			if (report is null)
-				throw new ReportNotFoundException();
-
-			return report;
-		}
 
 		public string SaveReport(string id, Report report, bool isTemporary = false)
 		{

@@ -1,6 +1,6 @@
-# Web Designer OData sample
+# Web Designer SQLite and OData sample
 
-This sample demonstrates the use of custom data providers(SQLite and OData) in the GrapeCity ActiveReports Web Designer.
+This sample demonstrates the use of custom data providers (SQLite and OData) in the GrapeCity ActiveReports Web Designer.
 
 ## System requirements
 

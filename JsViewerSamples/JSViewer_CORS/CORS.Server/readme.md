@@ -5,7 +5,7 @@ This sample demonstrates how to make a server that could be used by GrapeCity Ac
 ## System requirements
 
 This sample requires
-[Visual Studio 2013](https://visualstudio.microsoft.com/vs/) or newer, and
+[Visual Studio 2015](https://visualstudio.microsoft.com/vs/) or newer, and
 the [.NET Framework Dev Pack](https://www.microsoft.com/net/download) 4.6.2 or later.
 
 ## Build the sample
@@ -23,3 +23,7 @@ the [.NET Framework Dev Pack](https://www.microsoft.com/net/download) 4.6.2 or l
 To debug the sample and then run it, press F5 or select **Debug → Start
 Debugging**. To run the sample without debugging, press Ctrl+F5 or select
 **Debug → Start Without Debugging**.
+
+## Changing the client url
+
+The client url is specified in the web.config as value of custom header "Access-Control-Allow-Origin".

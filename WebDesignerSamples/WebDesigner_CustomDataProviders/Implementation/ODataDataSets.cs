@@ -1,10 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Linq;
-using System.Net;
-using System.Text;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
+
 using WebDesignerCustomDataProviders.Services;
 
 namespace WebDesignerCustomDataProviders.Implementation
@@ -40,34 +37,12 @@ namespace WebDesignerCustomDataProviders.Implementation
 			var name = Uri.UnescapeDataString(id);
 			var fullPath = Path.Combine(_rootFolder.FullName, name);
 
-			if (!File.Exists(fullPath)) throw new ArgumentException();
-			
-			// Read result template
-			var template = JObject.Parse(File.ReadAllText(fullPath));
-			
-			// Fetch OData url
-			var oDataUrl = template["ODataUrl"].ToString();
+			if (!File.Exists(fullPath))
+				throw new ArgumentException();
 
-			// Download and parse OData json
-			JObject parsed;;
-			using (var webClient = new WebClient())
-			{
-				webClient.Encoding = Encoding.UTF8;
-				var json = webClient.DownloadString(oDataUrl);
+			using var streamReader = File.OpenText(fullPath);
 
-				parsed = JObject.Parse(json);
-			}
-			
-			// Rename "value" to "Data"
-			parsed["Data"] = parsed["value"];
-			parsed.Remove("value");
-
-			var jsonData = JsonConvert.SerializeObject(parsed);
-
-			// Set data in the template
-			template["DataSource"]["ConnectionProperties"]["ConnectString"] = "jsonData=" +	jsonData;
-
-			return template.ToString();
+			return streamReader.ReadToEnd();
 		}
 	}
 }

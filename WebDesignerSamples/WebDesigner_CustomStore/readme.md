@@ -11,7 +11,7 @@ To use custom store for a designer follow these steps:
    2. Call `UseCustomStore` method for viewer (`app.UseReporting`) with `GetReport` method as argument.
    3. Call `UseCustomStore` method for designer (`app.UseDesigner`) with `IResourcesService` implementation as argument.
 
-This case contains two different implementations based on the [LiteDB](https://www.litedb.org/) and [CosmosDB](https://azure.microsoft.com/ru-ru/services/cosmos-db/) as an example.
+This case contains two different implementations based on the [LiteDB](https://www.litedb.org/) and [CosmosDB](https://azure.microsoft.com/en-us/services/cosmos-db/) as an example.
 
 LiteDB implementation is used by default. To try CosmosDB implementation, please, follow [this guide](resources/CosmosDB/howto.md).
 
