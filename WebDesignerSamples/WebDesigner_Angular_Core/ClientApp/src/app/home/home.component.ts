@@ -13,7 +13,7 @@ var viewer = null;
 
 export class HomeComponent implements OnInit {
   reportName: any;
-  @ViewChild('viewer', {static: false}) private viewerElement: ElementRef;
+  @ViewChild('viewer') private viewerElement: ElementRef;
 
   constructor(private route: ActivatedRoute) {
     this.route.params.subscribe(params => {

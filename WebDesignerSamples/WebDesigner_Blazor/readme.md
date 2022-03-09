@@ -7,7 +7,7 @@ This sample demonstrates the use of GrapeCity ActiveReports Web Designer in the 
 This sample requires:
  * [Visual Studio 2019](https://visualstudio.microsoft.com/vs/) 16.4 or newer
  * [.NET Core](https://www.microsoft.com/net/download) 3.1 SDK.
- * [.NET Core Hosting Bundle](https://dotnet.microsoft.com/download/dotnet-core/thank-you/runtime-aspnetcore-2.1.15-windows-hosting-bundle-installer) (for deployment to IIS)
+ * [.NET Core Hosting Bundle](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-aspnetcore-3.1.22-windows-hosting-bundle-installer) (for deployment to IIS)
 
 Angular requires [Node.js](https://nodejs.org) 10 or later.
 
