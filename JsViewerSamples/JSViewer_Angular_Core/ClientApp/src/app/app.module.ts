@@ -23,9 +23,9 @@ import { ViewComponent } from './view/view.component';
     HttpClientModule,
     FormsModule,
     RouterModule.forRoot([
-      { path: '', component: HomeComponent, pathMatch: 'full' },
-      { path: 'view/:id', component: ViewComponent }
-    ])
+    { path: '', component: HomeComponent, pathMatch: 'full' },
+    { path: 'view/:id', component: ViewComponent }
+], { relativeLinkResolution: 'legacy' })
   ],
   providers: [],
   bootstrap: [AppComponent]

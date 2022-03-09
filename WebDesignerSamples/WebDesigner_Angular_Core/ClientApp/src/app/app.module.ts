@@ -18,12 +18,12 @@ import { HomeComponent } from './home/home.component';
     HttpClientModule,
     FormsModule,
     RouterModule.forRoot([
-      { path: '', component: HomeComponent, pathMatch: 'full' },
-      { path: 'create', component: HomeComponent },
-      { path: 'edit/:id', component: HomeComponent },
-      { path: 'preview/:id', component: HomeComponent },
-      { path: '**', redirectTo: '' },
-    ])
+    { path: '', component: HomeComponent, pathMatch: 'full' },
+    { path: 'create', component: HomeComponent },
+    { path: 'edit/:id', component: HomeComponent },
+    { path: 'preview/:id', component: HomeComponent },
+    { path: '**', redirectTo: '' },
+], { relativeLinkResolution: 'legacy' })
   ],
   providers: [],
   bootstrap: [AppComponent]

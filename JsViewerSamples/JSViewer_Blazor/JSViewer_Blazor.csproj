@@ -9,7 +9,7 @@
     <Folder Include="wwwroot\" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="GrapeCity.ActiveReports.Aspnetcore.Viewer" Version="15.2.0" />
+    <PackageReference Include="GrapeCity.ActiveReports.Aspnetcore.Viewer" Version="15.3.1" />
     <PackageReference Include="System.Text.Encoding.CodePages" Version="5.0.0" />
   </ItemGroup>
   <Target Name="ClientBuild" BeforeTargets="BeforeBuild">

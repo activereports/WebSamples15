@@ -9,6 +9,6 @@
   "author": "GrapeCity",
   "license": "ISC",
   "dependencies": {
-    "@grapecity/ar-viewer": "15.2.0"
+    "@grapecity/ar-viewer": "15.3.1"
   }
 }
